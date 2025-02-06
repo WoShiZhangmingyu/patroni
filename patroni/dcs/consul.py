@@ -534,6 +534,7 @@ class Consul(AbstractDCS):
         tags.append(role)
         if role == 'primary':
             tags.append('master')
+            tags.append('leader')
         self._previous_loop_service_tags = self._service_tags
         self._previous_loop_token = self._client.token
 
